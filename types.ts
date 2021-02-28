@@ -44,7 +44,7 @@ values: [1, 'text']
 //enumerator para criação de chave-valor
  enum Colors {
      white = '#fff',
-     black = '#212121',
+     black = '#212121', 
  }
 
  //any (Qualquer coisa) - Não recomendavel usar

@@ -4,7 +4,7 @@
 let text = 'title'
 text = 'new title'
 
-
+ 
 window.addEventListener('click', (e) => {
     console.log(e.target);
     // console.log(e.foo);
