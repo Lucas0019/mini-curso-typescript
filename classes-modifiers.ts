@@ -21,7 +21,8 @@ class userAccount {
 
 //Classe que extende da classe userAccount
 class userAdmin extends userAccount {
-    nickname: string;
+    // nickname: string; - Objeto fica acessivel externamente
+    private nickname: string; // Funciona dentro do escopo
     level: number;
 
     constructor(
@@ -35,6 +36,11 @@ class userAdmin extends userAccount {
 
         this.nickname = nickname;
         this.level = level;
+    }
+
+    logCharDetails(): void {
+        console.log(`The player ${this.name} has the char ${this.nickname} at level ${this.level}`);
+        
     }
 }
 
@@ -53,3 +59,12 @@ userduda.logDetails()
 
 
 //Modifiers (Public, Private, Protected e Readonly)
+
+//Exemplo - o nickname pode ser mudado
+const userMuda = new userAdmin('Eduarda',20,'Duda', 100)
+// userduda.nickname = "Doida"
+console.log(userduda)
+userMuda.logCharDetails()
+
+//Notas
+//Private - Só pode ser acessado dentro da classe que é definido 
